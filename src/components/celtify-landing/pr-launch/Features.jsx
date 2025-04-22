@@ -6,13 +6,13 @@ const Features = () => {
   
   const features = [
     {
-      title: "AR Language Immersion",
-      description: "Point your camera at objects around you and learn their names in Celtic languages. Our AR technology recognizes everyday items and teaches you vocabulary in context.",
+      title: "VR Celtic Experience",
+      description: "Step into the past and explore ancient Celtic cities like Dublin, Galway, and Edinburgh with historically accurate environments. Our VR simulation creates an immersive way to learn and preserve the language.",
       icon: "ar-icon"
     },
     {
-      title: "AI Pronunciation Coach",
-      description: "Our advanced AI listens to your pronunciation and provides real-time feedback to perfect your accent and speaking abilities.",
+      title: "Real-time Conversation",
+      description: "Speak English, and the AI powered AR simulation translates it into your chosen Celtic language in real-time. Hear and see translations to learn contextually in a dynamic, immersive environment with adaptive NPC responses.",
       icon: "ai-icon"
     },
     {

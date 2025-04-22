@@ -6,28 +6,32 @@ const FAQ = () => {
   
   const faqs = [
     {
-      question: "What makes Celtify different from other language learning apps?",
-      answer: "Celtify is the first language learning platform to combine augmented reality, artificial intelligence, and gamification specifically for Celtic languages. Unlike traditional apps that rely on flashcards and text-based learning, Celtify places language acquisition in the real world through AR technology, creating immersive and contextual learning experiences."
+      question: "What makes your Celtic language translation tool different?",
+      answer: "Our solution is the first to combine AI-powered Celtic language recognition with immersive VR experiences. Unlike existing translation tools that lack cultural context, our technology focuses specifically on Celtic languages with attention to context, syntax, handwriting and cultural nuances, creating a uniquely accurate and culturally sensitive translation experience."
     },
     {
-      question: "Which Celtic languages does Celtify support?",
-      answer: "At launch, Celtify will support Irish (Gaeilge), Scottish Gaelic (Gàidhlig), Welsh (Cymraeg), and Breton (Brezhoneg). We plan to add Manx and Cornish in future updates as we expand our language offerings."
+      question: "Which Celtic languages does your platform support?",
+      answer: "We currently support Irish (Gaeilge), Scottish Gaelic (Gàidhlig), and Welsh (Cymraeg). We're actively working on expanding to include other Celtic languages like Cornish (Kernowek) and Breton (Brezhoneg) in future updates."
     },
     {
-      question: "Do I need special equipment to use Celtify?",
-      answer: "Celtify works on standard smartphones and tablets with AR capabilities. Most devices manufactured in the last 3-4 years support AR functionality. For the best experience, we recommend devices with ARKit (iOS) or ARCore (Android) support."
+      question: "What equipment do I need to use the VR Celtic experience?",
+      answer: "Our VR simulation requires a standard VR headset. The translation tools can be accessed through our application on various devices, but for the full immersive experience of exploring ancient Celtic cities, we recommend using a compatible VR headset with motion controllers."
     },
     {
-      question: "Can I use Celtify without internet connection?",
-      answer: "The core AR functionality of Celtify requires an internet connection for the first use to download language data. After initial setup, basic lessons can be used offline, but advanced features like AI pronunciation coaching and community features will require connectivity."
+      question: "How historically accurate are the virtual Celtic environments?",
+      answer: "We've worked with historians, linguists, and cultural experts to create the most historically accurate reconstructions possible of ancient Celtic cities like Dublin, Galway, and Edinburgh. Our environments reflect authentic medieval everyday life and cultural contexts to enhance both the learning experience and cultural preservation."
     },
     {
-      question: "How does the AI pronunciation coach work?",
-      answer: "Our AI coach uses advanced speech recognition algorithms specifically trained on Celtic language phonetics. It analyzes your pronunciation in real-time, providing visual feedback on accuracy and offering suggestions for improvement based on native speaker patterns."
+      question: "How does the AI translation technology work?",
+      answer: "Our AI has been specifically trained on Celtic languages to understand their unique structures, contexts, and cultural references. It processes text and speech inputs, analyzes them for meaning and cultural context, and provides translations that preserve the cultural integrity of these endangered languages."
     },
     {
-      question: "Will there be a free version of Celtify?",
-      answer: "Yes! Celtify will offer a free tier with access to basic lessons in all supported languages. Premium features like advanced AI coaching, unlimited AR experiences, and cultural deep dives will be available through subscription options."
+      question: "Will there be a free version of the translation tool?",
+      answer: "Yes! We will offer a free tier with access to basic translation features for all supported Celtic languages. Premium features like the full VR immersive experiences, advanced cultural context translations, and educational institution resources will be available through subscription options."
+    },
+    {
+      question: "Who can benefit from this technology?",
+      answer: "Our platform serves multiple audiences including the Celtic diaspora and language learners worldwide, educational institutions and cultural organizations, and government bodies and businesses in Celtic regions. It's designed for anyone interested in learning, preserving, or working with Celtic languages in an immersive, culturally authentic way."
     }
   ];
   

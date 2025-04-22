@@ -9,12 +9,12 @@ const Hero = () => {
       <div className="hero-content">
         <h1 className="hero-title">
           Learn Celtic Languages Through
-          <span className="highlight"> Augmented Reality</span>
+          <span className="highlight"> AI and Augmented Reality</span>
         </h1>
         
         <p className="hero-subtitle">
-          Immerse yourself in Celtic culture with our AI-powered AR language learning game.
-          Experience ancient languages in a modern, interactive way.
+          Immerse yourself in Celtic culture with our AI-powered VR - AR language learning game.
+          Explore ancient Celtic cities while learning languages in a culturally immersive environment.
         </p>
         
         <div className="hero-cta">
@@ -30,12 +30,12 @@ const Hero = () => {
         
         <div className="hero-stats">
           <div className="stat">
-            <span className="stat-number">4</span>
+            <span className="stat-number">3+</span>
             <span className="stat-label">Celtic Languages</span>
           </div>
           <div className="stat">
-            <span className="stat-number">1000+</span>
-            <span className="stat-label">Interactive Lessons</span>
+            <span className="stat-number">VR-AR</span>
+            <span className="stat-label">Immersive Learning</span>
           </div>
           <div className="stat">
             <span className="stat-number">AI</span>

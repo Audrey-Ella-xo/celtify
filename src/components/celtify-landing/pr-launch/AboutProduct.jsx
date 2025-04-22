@@ -53,27 +53,27 @@ const AboutProduct = () => {
           </div>
           
           <div className="how-it-works">
-            <h3>How Celtify Works</h3>
+            <h3>How Our VR Celtic Experience Works</h3>
             <div className="steps">
               <div className="step">
                 <div className="step-number">1</div>
-                <h4>Scan Your Environment</h4>
-                <p>Point your camera at objects around you to trigger interactive AR experiences</p>
+                <h4>Enter Virtual Celtic Cities</h4>
+                <p>Explore historically accurate environments like ancient Dublin, Galway, or Edinburgh</p>
               </div>
               <div className="step">
                 <div className="step-number">2</div>
-                <h4>Learn Through Interaction</h4>
-                <p>Engage with virtual elements that teach vocabulary, grammar, and pronunciation</p>
+                <h4>Speak in English</h4>
+                <p>Our VR simulation captures your speech and processes it through our specialized AI</p>
               </div>
               <div className="step">
                 <div className="step-number">3</div>
-                <h4>Practice with AI</h4>
-                <p>Converse with our AI language coach that adapts to your learning pace</p>
+                <h4>See & Hear Celtic Translations</h4>
+                <p>Experience real-time translation into your chosen Celtic language with cultural context</p>
               </div>
               <div className="step">
                 <div className="step-number">4</div>
-                <h4>Track Your Progress</h4>
-                <p>Earn achievements and see your fluency grow through our analytics dashboard</p>
+                <h4>Interact with Virtual Environment</h4>
+                <p>Engage with adaptive NPCs who respond to your prompts in authentic Celtic languages</p>
               </div>
             </div>
           </div>
