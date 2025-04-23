@@ -1,234 +1,437 @@
 /* AboutProduct.css - Styles for the about product section */
 
 .about-section {
-    padding: 6rem 5%;
-    background-color: white;
-  }
-  
-  .about-container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .about-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    text-align: center;
-    color: var(--primary-color);
-    position: relative;
-  }
-  
-  .about-content h2::after {
-    content: '';
-    display: block;
-    width: 100px;
-    height: 4px;
-    background-color: var(--secondary-color);
-    margin: 1rem auto 0;
-  }
-  
+  padding: 6rem 5%;
+  background-color: var(--light-color);
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0C20 11.046 11.046 20 0 20 0 8.954 8.954 0 20 0zm0 40C20 28.954 28.954 20 40 20c0 11.046-8.954 20-20 20zm20-20C28.954 20 20 11.046 20 0c11.046 0 20 8.954 20 20zm-40 0c11.046 0 20 8.954 20 20-11.046 0-20-8.954-20-20z' fill='%23c19a49' fill-opacity='0.06' fill-rule='evenodd'/%3E%3C/svg%3E");
+  position: relative;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='15' viewBox='0 0 100 15'%3E%3Cpath d='M0,0 C10,10 20,0 30,10 C40,0 50,10 60,0 C70,10 80,0 90,10 C100,0 110,10 120,0' stroke='%23c19a49' fill='none' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: var(--primary-color);
+  position: relative;
+  font-family: var(--font-headings);
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 0 40px;
+}
+
+.about-content h2::before, .about-content h2::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath d='M15,0 C20,5 25,5 30,0 C25,5 25,10 30,15 C25,10 20,10 15,15 C20,10 15,5 15,0' stroke='%23c19a49' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.7;
+}
+
+.about-content h2::before {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.about-content h2::after {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+.about-content h2 span {
+  position: relative;
+}
+
+.about-content h2 span::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: var(--secondary-color);
+  margin: 1rem auto 0;
+  background-image: linear-gradient(to right, transparent, var(--secondary-color), transparent);
+}
+
+.vision-mission {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.vision, .mission {
+  flex: 1;
+  background-color: var(--light-color);
+  padding: 2.5rem;
+  border-radius: 0;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border: 2px solid var(--secondary-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.vision::before, .mission::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,0 L20,0 L20,20 L0,20 Z' fill='none' stroke='%23c19a49' stroke-width='0.5' stroke-opacity='0.1'/%3E%3C/svg%3E");
+  z-index: -1;
+}
+
+.vision:hover, .mission:hover {
+  transform: translateY(-10px);
+}
+
+.vision h3, .mission h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  font-family: var(--font-headings);
+  letter-spacing: 1.5px;
+  border-bottom: 1px solid rgba(193, 154, 73, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.vision h3::before, .mission h3::before {
+  content: '❖';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+}
+
+.vision p, .mission p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #483e35;
+  font-family: var(--font-main);
+}
+
+.languages-covered {
+  margin-bottom: 4rem;
+}
+
+.languages-covered h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+  font-family: var(--font-headings);
+  letter-spacing: 1.5px;
+  position: relative;
+  display: inline-block;
+  padding: 0 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.languages-covered h3::before, .languages-covered h3::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M10,0 C15,5 15,15 10,20 C5,15 5,5 10,0' stroke='%23c19a49' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+
+.languages-covered h3::before {
+  left: 0;
+}
+
+.languages-covered h3::after {
+  right: 0;
+}
+
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.language-card {
+  background-color: var(--light-color);
+  border-radius: 0;
+  padding: 2rem;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(193, 154, 73, 0.4);
+  position: relative;
+}
+
+.language-card::before, .language-card::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--secondary-color);
+  opacity: 0.7;
+}
+
+.language-card::before {
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.language-card::after {
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
+}
+
+.language-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.15);
+  border-color: var(--secondary-color);
+}
+
+.language-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  border-radius: 0;
+  background-color: rgba(193, 154, 73, 0.2);
+  border: 1px solid var(--secondary-color);
+}
+
+.irish {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%231e552a" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0M7 10l5 5 5-5"></path></svg>');
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.scottish {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%231e552a" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>');
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.welsh {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%231e552a" stroke-width="2"><path d="M18 8a6 6 0 0 0-6-6 6 6 0 0 0-6 6c0 7-3 9-3 9h18s-3-2-3-9M13 21v-9M11 21v-9"></path></svg>');
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.breton {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%231e552a" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>');
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.language-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: var(--tertiary-color);
+  font-family: var(--font-headings);
+  letter-spacing: 1px;
+}
+
+.language-card p {
+  color: #483e35;
+  font-size: 1rem;
+  font-family: var(--font-main);
+}
+
+.how-it-works h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+  font-family: var(--font-headings);
+  letter-spacing: 1.5px;
+  position: relative;
+  display: inline-block;
+  padding: 0 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.how-it-works h3::before, .how-it-works h3::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M10,0 C15,5 15,15 10,20 C5,15 5,5 10,0' stroke='%23c19a49' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+
+.how-it-works h3::before {
+  left: 0;
+}
+
+.how-it-works h3::after {
+  right: 0;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.steps::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 75px;
+  right: 75px;
+  height: 2px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='2' viewBox='0 0 100 2'%3E%3Cpath d='M0,1 C10,0 15,2 25,1 C35,0 40,2 50,1 C60,0 65,2 75,1 C85,0 90,2 100,1' stroke='%23c19a49' fill='none' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  z-index: 0;
+}
+
+.step {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 1.5rem;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+  font-family: var(--font-headings);
+  border: 2px solid var(--secondary-color);
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% 70%, 
+    70% 100%, 
+    0 100%
+  );
+  position: relative;
+  z-index: 2;
+}
+
+.step h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--dark-color);
+  font-family: var(--font-headings);
+  letter-spacing: 1px;
+}
+
+.step p {
+  font-size: 1rem;
+  color: #483e35;
+  font-family: var(--font-main);
+}
+
+/* Celtic decorative border between sections */
+.languages-covered, .how-it-works {
+  position: relative;
+  padding-top: 3rem;
+}
+
+.languages-covered::before, .how-it-works::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='15' viewBox='0 0 200 15'%3E%3Cpath d='M0,7.5 C20,0 40,15 60,7.5 C80,0 100,15 120,7.5 C140,0 160,15 180,7.5 C200,0 220,15 240,7.5' stroke='%23c19a49' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
   .vision-mission {
-    display: flex;
-    gap: 3rem;
-    margin-bottom: 4rem;
-  }
-  
-  .vision, .mission {
-    flex: 1;
-    background-color: #f8f9fa;
-    padding: 2.5rem;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-  }
-  
-  .vision:hover, .mission:hover {
-    transform: translateY(-10px);
-  }
-  
-  .vision h3, .mission h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-    display: flex;
-    align-items: center;
-  }
-  
-  .vision h3::before, .mission h3::before {
-    content: '';
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    background-color: var(--secondary-color);
-    border-radius: 50%;
-  }
-  
-  .vision p, .mission p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #495057;
-  }
-  
-  .languages-covered {
-    margin-bottom: 4rem;
-  }
-  
-  .languages-covered h3 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--primary-color);
-  }
-  
-  .language-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    flex-direction: column;
     gap: 2rem;
   }
   
-  .language-card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 1px solid #eee;
-  }
-  
-  .language-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    border-color: var(--primary-color);
-  }
-  
-  .language-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1.5rem;
-    border-radius: 50%;
-    background-color: rgba(78, 205, 196, 0.2);
-  }
-  
-  .irish {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%232e6d50" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0M7 10l5 5 5-5"></path></svg>');
-    background-size: 60%;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  .scottish {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%232e6d50" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>');
-    background-size: 60%;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  .welsh {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%232e6d50" stroke-width="2"><path d="M18 8a6 6 0 0 0-6-6 6 6 0 0 0-6 6c0 7-3 9-3 9h18s-3-2-3-9M13 21v-9M11 21v-9"></path></svg>');
-    background-size: 60%;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  .breton {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%232e6d50" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>');
-    background-size: 60%;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  .language-card h4 {
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
-    color: var(--tertiary-color);
-  }
-  
-  .language-card p {
-    color: #6c757d;
-    font-size: 1rem;
-  }
-  
-  .how-it-works h3 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--primary-color);
-  }
-  
   .steps {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1.5rem;
+    gap: 2rem;
+  }
+  
+  .steps::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content h2 {
+    font-size: 2rem;
+  }
+  
+  .language-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   
   .step {
-    flex: 1;
-    min-width: 200px;
-    text-align: center;
-    position: relative;
+    min-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .language-grid {
+    grid-template-columns: 1fr;
   }
   
-  .step-number {
-    width: 50px;
-    height: 50px;
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 0 auto 1.5rem;
-    box-shadow: 0 5px 15px rgba(46, 109, 80, 0.3);
+  .step {
+    min-width: 100%;
   }
-  
-  .step h4 {
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
-    color: var(--dark-color);
-  }
-  
-  .step p {
-    font-size: 1rem;
-    color: #6c757d;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 992px) {
-    .vision-mission {
-      flex-direction: column;
-      gap: 2rem;
-    }
-    
-    .steps {
-      gap: 2rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .about-content h2 {
-      font-size: 2rem;
-    }
-    
-    .language-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .step {
-      min-width: calc(50% - 1rem);
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .language-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .step {
-      min-width: 100%;
-    }
-  }
+}

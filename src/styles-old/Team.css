@@ -1,0 +1,276 @@
+/* Team.css - Styles for the team section */
+
+.team-section {
+    padding: 6rem 5%;
+    background-color: #f8f9fa;
+  }
+  
+  .team-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .team-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--primary-color);
+    position: relative;
+  }
+  
+  .team-container h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin: 1rem auto 0;
+  }
+  
+  .team-intro {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    color: #495057;
+    line-height: 1.7;
+  }
+  
+  .core-team, .advisors {
+    margin-bottom: 4rem;
+  }
+  
+  .core-team h3, .advisors h3 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    color: var(--tertiary-color);
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  .team-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .team-member-image {
+    height: 250px;
+    width: 100%;
+    background-color: #ddd;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .team-member-1 {
+    background-image: linear-gradient(45deg, #2e6d50, #4ecdc4);
+  }
+  
+  .team-member-2 {
+    background-image: linear-gradient(45deg, #4ecdc4, #f5a623);
+  }
+  
+  .team-member-3 {
+    background-image: linear-gradient(45deg, #7b3fa3, #2e6d50);
+  }
+  
+  .team-member-4 {
+    background-image: linear-gradient(45deg, #f5a623, #7b3fa3);
+  }
+
+  .team-member-5 {
+    background-image: linear-gradient(45deg, #2e6b6d, #a33f5f);
+  }
+  
+  .team-card h4 {
+    font-size: 1.3rem;
+    margin: 1.5rem 1.5rem 0.5rem;
+    color: var(--primary-color);
+  }
+  
+  .team-role {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin: 0 1.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .team-bio {
+    margin: 0 1.5rem 1.5rem;
+    font-size: 0.95rem;
+    color: #6c757d;
+    line-height: 1.6;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .social-links a {
+    color: #6c757d;
+    transition: color 0.3s;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-links a:hover {
+    color: var(--primary-color);
+  }
+  
+  .social-links a::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .linkedin-icon::before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%236c757d" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg>');
+  }
+  
+  .twitter-icon::before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%236c757d" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>');
+  }
+  
+  .advisors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .advisor-card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+  }
+  
+  .advisor-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .advisor-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+    background-color: #ddd;
+    flex-shrink: 0;
+  }
+  
+  .advisor-1 {
+    background-image: linear-gradient(45deg, #2e6d50, #4ecdc4);
+  }
+  
+  .advisor-2 {
+    background-image: linear-gradient(45deg, #7b3fa3, #f5a623);
+  }
+  
+  .advisor-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: var(--primary-color);
+  }
+  
+  .advisor-role {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+  
+  .advisor-affiliation {
+    font-size: 0.85rem;
+    color: #6c757d;
+  }
+  
+  .join-team {
+    text-align: center;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .join-team h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  .join-team p {
+    font-size: 1.1rem;
+    color: #495057;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .careers-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(46, 109, 80, 0.3);
+  }
+  
+  .careers-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .team-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .advisor-card {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .advisor-image {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .advisors-grid {
+      grid-template-columns: 1fr;
+    }
+  }

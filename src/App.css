@@ -1,22 +1,39 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-
+/* #root {*
+* max-width: 1280px;*
+* margin: 0 auto;*
+* padding: 2rem;*
+* text-align: center;*
+*}*
 /* App.css - Main styles for the Celtify application */
 
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+/* Celtic Knot Font */
+@font-face {
+  font-family: 'Celtic Knots';
+  src: url('https://db.onlinewebfonts.com/t/1f72755782c3ac7b6bc19c96ddc273a0.eot');
+  src: url('https://db.onlinewebfonts.com/t/1f72755782c3ac7b6bc19c96ddc273a0.eot?#iefix') format('embedded-opentype'),
+       url('https://db.onlinewebfonts.com/t/1f72755782c3ac7b6bc19c96ddc273a0.woff2') format('woff2'),
+       url('https://db.onlinewebfonts.com/t/1f72755782c3ac7b6bc19c96ddc273a0.woff') format('woff'),
+       url('https://db.onlinewebfonts.com/t/1f72755782c3ac7b6bc19c96ddc273a0.ttf') format('truetype'),
+       url('https://db.onlinewebfonts.com/t/1f72755782c3ac7b6bc19c96ddc273a0.svg#Celtic Knots') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --primary-color: #2e6d50;
-  --secondary-color: #f5a623;
-  --tertiary-color: #7b3fa3;
-  --light-color: #f8f9fa;
-  --dark-color: #212529;
-  --accent-color: #4ecdc4;
-  --font-main: 'Poppins', sans-serif;
-  --font-headings: 'Montserrat', sans-serif;
+  --primary-color: #1e552a; /* Deep forest green */
+  --secondary-color: #c19a49; /* Aged Celtic gold */
+  --tertiary-color: #61384b; /* Rich burgundy for Celtic royalty */
+  --light-color: #f2e8c9; /* Aged parchment color */
+  --dark-color: #2a2520; /* Rich deep brown */
+  --accent-color: #5a7d8c; /* Celtic blue */
+  --font-main: 'IM Fell English', 'Goudy Old Style', serif;
+  --font-headings: 'Celtic Knots', 'Cinzel Decorative', 'MedievalSharp', serif;
 }
 
 * {
@@ -24,7 +41,6 @@
   margin: 0;
   padding: 0;
   max-width: 100%;
-
 }
 
 body {
@@ -32,12 +48,48 @@ body {
   line-height: 1.6;
   color: var(--dark-color);
   background-color: var(--light-color);
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0C20 11.046 11.046 20 0 20 0 8.954 8.954 0 20 0zm0 40C20 28.954 28.954 20 40 20c0 11.046-8.954 20-20 20zm20-20C28.954 20 20 11.046 20 0c11.046 0 20 8.954 20 20zm-40 0c11.046 0 20 8.954 20 20-11.046 0-20-8.954-20-20z' fill='%23c19a49' fill-opacity='0.06' fill-rule='evenodd'/%3E%3C/svg%3E");
   overflow-x: hidden;
+  font-size: 1.02rem;
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
 }
 
 a {
   text-decoration: none;
   color: var(--primary-color);
+  transition: all 0.3s;
+  position: relative;
+  font-weight: 500;
+  padding: 0 3px;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+a:before, a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='8' viewBox='0 0 20 8'%3E%3Cpath d='M0,4 C5,0 15,8 20,4' stroke='%23c19a49' fill='none' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-size: 20px 8px;
+  transition: width 0.3s ease;
+}
+
+a:before {
+  top: -10px;
+  left: 0;
+}
+
+a:after {
+  bottom: -10px;
+  right: 0;
+}
+
+a:hover:before, a:hover:after {
+  width: 100%;
 }
 
 ul {
@@ -48,6 +100,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-headings);
   line-height: 1.3;
   margin-bottom: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(193, 154, 73, 0.3);
+  padding-bottom: 0.5rem;
 }
 
 button {
@@ -65,23 +124,41 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(242, 232, 201, 0.97);
   transition: all 0.3s ease;
   z-index: 100;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
+  border-bottom: 4px solid var(--secondary-color);
+  border-top: 2px solid var(--primary-color);
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c19a49' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .header.scrolled {
-  background-color: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--light-color);
+  box-shadow: 0 2px 10px rgba(45, 43, 39, 0.15);
   padding: 0.7rem 5%;
+  border-bottom: 3px solid var(--secondary-color);
 }
 
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--primary-color);
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  font-family: var(--font-headings);
+  position: relative;
+  padding: 0 10px;
+}
+
+.logo::before, .logo::after {
+  content: "❖";
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+  opacity: 0.8;
 }
 
 nav ul {
@@ -93,10 +170,23 @@ nav ul {
 nav a {
   font-weight: 500;
   transition: color 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+  font-family: var(--font-headings);
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-image: linear-gradient(to bottom, rgba(193, 154, 73, 0), rgba(193, 154, 73, 0));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 0px;
+  transition: background-size 0.3s, color 0.3s;
 }
 
 nav a:hover {
   color: var(--secondary-color);
+  background-size: 100% 2px;
+  background-image: linear-gradient(to bottom, rgba(193, 154, 73, 0), rgba(193, 154, 73, 0.5));
 }
 
 .cta-button {
@@ -104,15 +194,31 @@ nav a:hover {
   color: white;
   border: none;
   padding: 0.7rem 1.5rem;
-  border-radius: 25px;
+  border-radius: 0;
   font-weight: 600;
   transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: var(--font-headings);
+  position: relative;
+  border: 2px solid var(--secondary-color);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(to bottom, var(--primary-color), darken(var(--primary-color), 15%));
+  clip-path: polygon(
+    0 0, 
+    calc(100% - 10px) 0, 
+    100% 10px, 
+    100% 100%, 
+    10px 100%, 
+    0 calc(100% - 10px)
+  );
 }
 
 .cta-button:hover {
   background-color: var(--secondary-color);
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(to bottom, var(--secondary-color), darken(var(--secondary-color), 15%));
 }
 
 main {
@@ -121,6 +227,7 @@ main {
 
 section {
   padding: 5rem 0;
+  border-bottom: 1px solid rgba(184, 134, 11, 0.2); /* Subtle golden separator */
 }
 
 .section-title {
@@ -128,38 +235,118 @@ section {
   font-size: 2.5rem;
   margin-bottom: 3rem;
   position: relative;
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title::before, .section-title::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'%3E%3Cpath d='M20,0 C40,10 60,10 80,0 C60,10 40,30 20,20 C40,30 60,10 80,20 C60,30 40,10 20,40 C40,10 60,30 80,40' stroke='%23c19a49' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.6;
+}
+
+.section-title::before {
+  left: -120px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .section-title::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
+  right: -120px;
+  top: 50%;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+.section-title span {
+  position: relative;
+}
+
+.section-title span::before, .section-title span::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 60px;
   background-color: var(--secondary-color);
-  margin: 1rem auto 0;
+  top: 50%;
+}
+
+.section-title span::before {
+  right: 100%;
+  margin-right: 15px;
 }
 
 /* Responsive adjustments */
+.celtic-knot-divider {
+  height: 30px;
+  width: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='30' viewBox='0 0 200 30'%3E%3Cpath d='M10,10 C20,0 30,20 40,10 C50,0 60,20 70,10 C80,0 90,20 100,10 C110,0 120,20 130,10 C140,0 150,20 160,10 C170,0 180,20 190,10' stroke='%23c19a49' fill='none' stroke-width='2'/%3E%3Cpath d='M10,20 C20,10 30,30 40,20 C50,10 60,30 70,20 C80,10 90,30 100,20 C110,10 120,30 130,20 C140,10 150,30 160,20 C170,10 180,30 190,20' stroke='%23c19a49' fill='none' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: center;
+  margin: 2rem 0;
+}
+
+/* Celtic Knot Border Box */
+.celtic-border {
+  border: 20px solid transparent;
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M0,0 L100,0 L100,100 L0,100 Z' fill='none' stroke='%23c19a49' stroke-width='8'/%3E%3Cpath d='M20,20 C40,10 60,30 80,20 M20,80 C40,70 60,90 80,80 M20,20 C10,40 30,60 20,80 M80,20 C70,40 90,60 80,80' stroke='%23c19a49' fill='none' stroke-width='4'/%3E%3C/svg%3E") 20;
+  padding: 20px;
+}
+
+/* Individual Celtic Knot Character Usage */
+.celtic-symbol::before {
+  font-family: 'Celtic Knots';
+  content: "A"; /* Different letters represent different knot patterns */
+  font-size: 2rem;
+  color: var(--secondary-color);
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+.celtic-corner {
+  position: relative;
+}
+
+.celtic-corner::before, .celtic-corner::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.celtic-corner::before {
+  top: -10px;
+  left: -10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath d='M30,30 C15,30 0,15 0,0 C0,15 15,30 30,30 Z' fill='none' stroke='%23c19a49' stroke-width='1.5'/%3E%3Cpath d='M20,20 C15,15 10,20 5,15 C10,10 15,15 10,10' stroke='%23c19a49' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+}
+
+.celtic-corner::after {
+  bottom: -10px;
+  right: -10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath d='M0,0 C15,0 30,15 30,30 C30,15 15,0 0,0 Z' fill='none' stroke='%23c19a49' stroke-width='1.5'/%3E%3Cpath d='M10,10 C15,15 20,10 25,15 C20,20 15,15 20,20' stroke='%23c19a49' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+}
+
 @media (max-width: 768px) {
   .header {
     padding: 1rem 2%;
   }
-  
   nav ul {
     gap: 1rem;
   }
-  
   .logo {
     font-size: 1.5rem;
   }
-  
   .section-title {
     font-size: 2rem;
-  }
-}
-
-@media (max-width: 576px) {
-  nav ul {
-    display: none; /* Mobile menu would need JS toggle */
   }
 }
