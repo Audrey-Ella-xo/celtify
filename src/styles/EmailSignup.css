@@ -1,187 +1,324 @@
 /* EmailSignup.css - Styles for the email signup section */
-
 .email-signup-section {
-    padding: 6rem 5%;
-    background-color: #f8f9fa;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4rem;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 6rem 5%;
+  background-color: var(--light-color);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0C20 11.046 11.046 20 0 20 0 8.954 8.954 0 20 0zm0 40C20 28.954 28.954 20 40 20c0 11.046-8.954 20-20 20zm20-20C28.954 20 20 11.046 20 0c11.046 0 20 8.954 20 20zm-40 0c11.046 0 20 8.954 20 20-11.046 0-20-8.954-20-20z' fill='%23c19a49' fill-opacity='0.07' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.email-signup-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='15' viewBox='0 0 100 15'%3E%3Cpath d='M0,0 C10,10 20,0 30,10 C40,0 50,10 60,0 C70,10 80,0 90,10 C100,0 110,10 120,0' stroke='%23c19a49' fill='none' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+}
+
+.signup-container {
+  flex: 1;
+  min-width: 350px;
+}
+
+.signup-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-family: var(--font-headings);
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(193, 154, 73, 0.3);
+}
+
+.signup-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background-color: var(--secondary-color);
+}
+
+.signup-container p {
+  font-size: 1.1rem;
+  color: #483e35;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  font-family: var(--font-main);
+}
+
+.signup-form {
+  margin-top: 2rem;
+  position: relative;
+}
+
+.signup-form::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  width: 100px;
+  height: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='15' viewBox='0 0 100 15'%3E%3Cpath d='M0,7.5 C10,0 20,15 30,7.5 C40,0 50,15 60,7.5 C70,0 80,15 90,7.5' stroke='%23c19a49' fill='none' stroke-width='1.5' opacity='0.6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.input-group input {
+  flex: 3;
+  padding: 1rem 1.5rem;
+  border: 2px solid rgba(193, 154, 73, 0.4);
+  border-radius: 0;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+  font-family: var(--font-main);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.input-group input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 3px 3px 0 rgba(30, 85, 42, 0.2);
+}
+
+.input-group input.error {
+  border-color: #a83232;
+}
+
+.submit-button {
+  flex: 1;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 0;
+  padding: 0 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: var(--font-headings);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: 2px solid var(--secondary-color);
+  border-left: none;
+  position: relative;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% 100%,
+    0 100%
+  );
+}
+
+.submit-button:hover {
+  background-color: var(--secondary-color);
+}
+
+.error-message {
+  color: #a83232;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-main);
+}
+
+.privacy-note {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-top: 0.5rem;
+  font-family: var(--font-main);
+  font-style: italic;
+}
+
+.success-message {
+  background-color: rgba(30, 85, 42, 0.1);
+  border-radius: 0;
+  padding: 2rem;
+  text-align: center;
+  border: 2px solid var(--secondary-color);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.1);
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,0 L20,0 L20,20 L0,20 Z' fill='none' stroke='%23c19a49' stroke-width='0.5' stroke-opacity='0.1'/%3E%3C/svg%3E");
+  position: relative;
+}
+
+.success-message::before, .success-message::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--secondary-color);
+  opacity: 0.7;
+}
+
+.success-message::before {
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.success-message::after {
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
+}
+
+.success-icon {
+  background-color: var(--primary-color);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin: 0 auto 1.5rem;
+  border: 2px solid var(--secondary-color);
+  position: relative;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 70%,
+    70% 100%,
+    0 100%
+  );
+}
+
+.success-message h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-family: var(--font-headings);
+  letter-spacing: 1.5px;
+}
+
+.benefits-list {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 0;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--secondary-color);
+  position: relative;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,0 L20,0 L20,20 L0,20 Z' fill='none' stroke='%23c19a49' stroke-width='0.5' stroke-opacity='0.08'/%3E%3C/svg%3E");
+}
+
+.benefits-list::before, .benefits-list::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M0,0 C10,0 20,10 20,20 C10,20 0,10 0,0 Z' fill='none' stroke='%23c19a49' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: contain;
+}
+
+.benefits-list::before {
+  top: -2px;
+  left: -2px;
+}
+
+.benefits-list::after {
+  bottom: -2px;
+  right: -2px;
+  transform: rotate(180deg);
+}
+
+.benefits-list h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  position: relative;
+  font-family: var(--font-headings);
+  letter-spacing: 1.5px;
+}
+
+.benefits-list h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  background-image: linear-gradient(to right, var(--secondary-color), transparent);
+}
+
+.benefits-list ul {
+  padding-left: 1.5rem;
+}
+
+.benefits-list li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+  list-style-type: none;
+  font-family: var(--font-main);
+  color: #483e35;
+}
+
+.benefits-list li::before {
+  content: '❖';
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 0.8rem;
+  top: 0.3rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .email-signup-section {
+    gap: 2rem;
   }
   
   .signup-container {
-    flex: 1;
-    min-width: 350px;
-  }
-  
-  .signup-container h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-  }
-  
-  .signup-container p {
-    font-size: 1.1rem;
-    color: #495057;
-    margin-bottom: 2rem;
-    line-height: 1.7;
-  }
-  
-  .signup-form {
-    margin-top: 2rem;
-  }
-  
-  .input-group {
-    display: flex;
-    margin-bottom: 1rem;
-  }
-  
-  .input-group input {
-    flex: 3;
-    padding: 1rem 1.5rem;
-    border: 1px solid #ced4da;
-    border-radius: 30px 0 0 30px;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s;
-  }
-  
-  .input-group input:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(46, 109, 80, 0.2);
-  }
-  
-  .input-group input.error {
-    border-color: #dc3545;
-  }
-  
-  .submit-button {
-    flex: 1;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 0 30px 30px 0;
-    padding: 0 1.5rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  
-  .submit-button:hover {
-    background-color: #255a42;
-  }
-  
-  .error-message {
-    color: #dc3545;
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
-  }
-  
-  .privacy-note {
-    font-size: 0.8rem;
-    color: #6c757d;
-    margin-top: 0.5rem;
-  }
-  
-  .success-message {
-    background-color: rgba(46, 109, 80, 0.1);
-    border-radius: 10px;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .success-icon {
-    background-color: var(--primary-color);
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    margin: 0 auto 1.5rem;
-  }
-  
-  .success-message h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+    min-width: 100%;
   }
   
   .benefits-list {
-    flex: 1;
-    min-width: 300px;
-    background-color: white;
-    padding: 2.5rem;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    min-width: 100%;
   }
   
-  .benefits-list h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--primary-color);
-    position: relative;
+  .input-group {
+    flex-direction: column;
   }
   
-  .benefits-list h3::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background-color: var(--secondary-color);
-  }
-  
-  .benefits-list ul {
-    padding-left: 1.5rem;
-  }
-  
-  .benefits-list li {
+  .input-group input {
+    border-radius: 0;
     margin-bottom: 1rem;
-    position: relative;
-    padding-left: 1.5rem;
-    list-style-type: none;
   }
   
-  .benefits-list li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
-    font-weight: bold;
+  .submit-button {
+    border-radius: 0;
+    padding: 1rem;
+    border-left: 2px solid var(--secondary-color);
+    clip-path: polygon(
+      0 0,
+      calc(100% - 10px) 0,
+      100% 10px,
+      100% 100%,
+      10px 100%,
+      0 calc(100% - 10px)
+    );
   }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .email-signup-section {
-      gap: 2rem;
-    }
-    
-    .signup-container {
-      min-width: 100%;
-    }
-    
-    .benefits-list {
-      min-width: 100%;
-    }
-    
-    .input-group {
-      flex-direction: column;
-    }
-    
-    .input-group input {
-      border-radius: 30px;
-      margin-bottom: 1rem;
-    }
-    
-    .submit-button {
-      border-radius: 30px;
-      padding: 1rem;
-    }
-  }
+}

@@ -1,0 +1,187 @@
+/* EmailSignup.css - Styles for the email signup section */
+
+.email-signup-section {
+    padding: 6rem 5%;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .signup-container {
+    flex: 1;
+    min-width: 350px;
+  }
+  
+  .signup-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  .signup-container p {
+    font-size: 1.1rem;
+    color: #495057;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+  
+  .signup-form {
+    margin-top: 2rem;
+  }
+  
+  .input-group {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  
+  .input-group input {
+    flex: 3;
+    padding: 1rem 1.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 30px 0 0 30px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .input-group input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(46, 109, 80, 0.2);
+  }
+  
+  .input-group input.error {
+    border-color: #dc3545;
+  }
+  
+  .submit-button {
+    flex: 1;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    padding: 0 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #255a42;
+  }
+  
+  .error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+  
+  .privacy-note {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-top: 0.5rem;
+  }
+  
+  .success-message {
+    background-color: rgba(46, 109, 80, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .success-icon {
+    background-color: var(--primary-color);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 0 auto 1.5rem;
+  }
+  
+  .success-message h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .benefits-list {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .benefits-list h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    position: relative;
+  }
+  
+  .benefits-list h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--secondary-color);
+  }
+  
+  .benefits-list ul {
+    padding-left: 1.5rem;
+  }
+  
+  .benefits-list li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+    list-style-type: none;
+  }
+  
+  .benefits-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .email-signup-section {
+      gap: 2rem;
+    }
+    
+    .signup-container {
+      min-width: 100%;
+    }
+    
+    .benefits-list {
+      min-width: 100%;
+    }
+    
+    .input-group {
+      flex-direction: column;
+    }
+    
+    .input-group input {
+      border-radius: 30px;
+      margin-bottom: 1rem;
+    }
+    
+    .submit-button {
+      border-radius: 30px;
+      padding: 1rem;
+    }
+  }
