@@ -26,6 +26,14 @@ const Countdown = ({ launchDate }) => {
     
     return () => clearTimeout(timer);
   });
+
+  // Function to scroll to email signup section
+  const scrollToEmailSignup = () => {
+    const emailSignupSection = document.getElementById('email-signup');
+    if (emailSignupSection) {
+      emailSignupSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   
   return (
     <section className="countdown-section">
@@ -52,7 +60,7 @@ const Countdown = ({ launchDate }) => {
           </div>
         </div>
         
-        <button className="notify-button">Notify Me at Launch</button>
+        <button className="notify-button" onClick={scrollToEmailSignup}>Notify Me at Launch</button>
       </div>
       
       <div className="countdown-background">

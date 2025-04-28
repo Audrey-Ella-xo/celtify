@@ -30,6 +30,7 @@
   --secondary-color: #c19a49; /* Aged Celtic gold */
   --tertiary-color: #61384b; /* Rich burgundy for Celtic royalty */
   --light-color: #f2e8c9; /* Aged parchment color */
+  --light-green-color: #2b5133; /* Deep forest green 2b6337 */
   --dark-color: #2a2520; /* Rich deep brown */
   --accent-color: #5a7d8c; /* Celtic blue */
   --font-main: 'IM Fell English', 'Goudy Old Style', serif;
@@ -124,7 +125,8 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
-  background-color: rgba(242, 232, 201, 0.97);
+  /* background-color: rgba(242, 232, 201, 0.97); */
+  background-color: var(--primary-color);
   transition: all 0.3s ease;
   z-index: 100;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
@@ -134,7 +136,7 @@ button {
 }
 
 .header.scrolled {
-  background-color: var(--light-color);
+  background-color: var(--light-green-color);
   box-shadow: 0 2px 10px rgba(45, 43, 39, 0.15);
   padding: 0.7rem 5%;
   border-bottom: 3px solid var(--secondary-color);
@@ -143,7 +145,7 @@ button {
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   letter-spacing: 2px;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
   font-family: var(--font-headings);
@@ -181,6 +183,7 @@ nav a {
   background-repeat: no-repeat;
   background-size: 100% 0px;
   transition: background-size 0.3s, color 0.3s;
+  color: var(--secondary-color);
 }
 
 nav a:hover {
@@ -220,6 +223,14 @@ nav a:hover {
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
   background-image: linear-gradient(to bottom, var(--secondary-color), darken(var(--secondary-color), 15%));
 }
+/* 
+nav .cta-button {
+  background-color: var(--secondary-color);
+}
+
+nav .cta-button:hover {
+  background-color: var(--primary-color);
+} */
 
 main {
   margin-top: 80px;
