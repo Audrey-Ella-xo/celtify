@@ -26,7 +26,7 @@ const AboutProduct = () => {
             </div>
           </div>
           
-          <div className="languages-covered">
+          {/* <div className="languages-covered">
             <h3>Celtic Languages You'll Learn</h3>
             <div className="language-grid">
               <div className="language-card">
@@ -50,7 +50,43 @@ const AboutProduct = () => {
                 <p>Explore the Celtic tongue of Brittany</p>
               </div>
             </div>
+          </div> */}
+          <div className="languages-covered">
+            <h3>Celtic Languages You'll Learn</h3>
+            
+            <div className="pioneered-language">
+              <div className="language-card featured">
+                <div className="language-icon irish"></div>
+                <div className="language-content">
+                  <h4>Irish (Gaeilge)</h4>
+                  <p>Immerse yourself in the rich traditions of Ireland</p>
+                  <span className="pioneer-badge">Pioneer Language</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="upcoming-languages">
+              <h4 className="coming-soon-title">Future Languages Coming Soon</h4>
+              <div className="language-grid">
+                <div className="language-card future">
+                  <div className="language-icon scottish"></div>
+                  <h4>Scottish Gaelic (Gàidhlig)</h4>
+                  <p>Connect with the heritage of the Scottish Highlands</p>
+                </div>
+                <div className="language-card future">
+                  <div className="language-icon welsh"></div>
+                  <h4>Welsh (Cymraeg)</h4>
+                  <p>Discover the living language of Wales</p>
+                </div>
+                <div className="language-card future">
+                  <div className="language-icon breton"></div>
+                  <h4>Breton (Brezhoneg)</h4>
+                  <p>Explore the Celtic tongue of Brittany</p>
+                </div>
+              </div>
+            </div>
           </div>
+          
           
           <div className="how-it-works">
             <h3>How Our VR Celtic Experience Works</h3>

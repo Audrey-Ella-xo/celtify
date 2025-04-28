@@ -24,7 +24,7 @@ const EmailSignup = () => {
   };
   
   return (
-    <section className="email-signup-section">
+    <section id="email-signup" className="email-signup-section">
       <div className="signup-container">
         <h2>Stay in the Loop</h2>
         <p>Be the first to know when Celtify launches and receive exclusive early access benefits</p>

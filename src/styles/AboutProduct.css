@@ -396,6 +396,102 @@
   opacity: 0.6;
 }
 
+/* CSS Additions */
+/* Keep your existing CSS for .languages-covered and add these */
+
+.pioneered-language {
+  margin-bottom: 2.5rem;
+}
+
+.language-card.featured {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border: 2px solid var(--secondary-color);
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-radius: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,0 L20,0 L20,20 L0,20 Z' fill='none' stroke='%23c19a49' stroke-width='0.5' stroke-opacity='0.1'/%3E%3C/svg%3E");
+}
+
+.language-card.featured .language-icon {
+  width: 100px;
+  height: 100px;
+  margin-right: 2rem;
+  flex-shrink: 0;
+}
+
+.language-content {
+  flex-grow: 1;
+}
+
+.pioneer-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+  border-radius: 0;
+  font-family: var(--font-headings);
+  text-transform: uppercase;
+}
+
+.coming-soon-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--tertiary-color);
+  font-size: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.coming-soon-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-color);
+  opacity: 0.5;
+}
+
+.upcoming-languages .language-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.language-card.future {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: white;
+  border: 1px solid rgba(193, 154, 73, 0.3);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+  opacity: 0.85;
+}
+
+.language-card.future:hover {
+  transform: translateY(-5px);
+  opacity: 1;
+}
+
+.language-card.future .language-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1rem;
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .vision-mission {
@@ -423,6 +519,15 @@
   
   .step {
     min-width: calc(50% - 1rem);
+  }
+  
+  .language-card.featured {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .language-card.featured .language-icon {
+    margin: 0 auto 1.5rem;
   }
 }
 
