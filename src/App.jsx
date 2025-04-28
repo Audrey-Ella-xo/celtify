@@ -66,7 +66,7 @@ function App() {
         {currentPage === 'home' ? (
           <>
             <Hero />
-            <Features id="features" />
+            <Features id="features" onNavigate={handleNavigation}/>
             <AboutProduct id="about" />
             <DemoPreview />
             <Countdown launchDate="2025-07-30T00:00:00" />
